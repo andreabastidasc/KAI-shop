@@ -31,3 +31,19 @@ body {
   font-family: 'Poiret One', cursive;
   color: black !important;
 }
+
+.counter-container { 
+  padding: 2rem !important;
+  width: 20rem;
+  margin: 0 auto;
+}
+
+.btn {
+  max-height: 50px;
+  width: 50px;
+}
+
+.count {
+  font-weight: bold;
+  font-size: 2rem;
+}
