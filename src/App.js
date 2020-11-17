@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import NavBar from './Components/NavBar'
-import Home from './Components/Home'
+import NavBar from './Components/NavBar';
+import Home from './Components/Home';
 import ItemCount from './Components/ItemCount';
+
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
         <NavBar />
       </header>
       <main className="row">
-        <Home greeting='Bienvenidos a Kai' />
+        <Home greeting='Bienvenidos a Kai'>
+        </Home>
         <section className="col-12 mt-4">
           <ItemCount max="10" min="0"/>
         </section>
