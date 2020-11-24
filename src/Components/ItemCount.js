@@ -15,12 +15,12 @@ const ItemCount = (props) => {
             setCount(prevCount => prevCount - 1);
         }
     };
-
+    
     return (
         <div className="counter-container d-flex flex-row justify-content-around">
-            <button className="btn btn-danger" onClick={onSust}> - </button> 
-            <p className="count"> {count} </p>
-            <button className="btn btn-success" onClick={onAdd}> + </button>
+            <button className="btn" onClick={onSust}> - </button> 
+            <p className="count btn-more"> {count} </p>
+            <button className="btn btn-less" onClick={onAdd}> + </button>
         </div>
     );
 }

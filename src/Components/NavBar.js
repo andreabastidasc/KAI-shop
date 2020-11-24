@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CartIcon from './CartIcon';
+
 
 const NavBar = () => {
 	return (
@@ -20,19 +22,22 @@ const NavBar = () => {
 			</button>
 			<div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
 				<div className="navbar-nav">
-					<a className="nav-link" href="#">
-						HOME <span className="sr-only">(current)</span>
+					<a className="nav-link">
+					   <Link to={`/`}>HOME</Link><span className="sr-only">(current)</span>
 					</a>
 					<a className="nav-link" href="#">
 						ABOUT US
 					</a>
-					<a className="nav-link" href="#">
-						SHOP
+					<a className="nav-link">
+						<Link to={`/shop`}>SHOP</Link>
 					</a>
                     <a className="nav-link" href="#">
                         CONTACT & FAQ'S
 					</a>
-					<CartIcon />
+					<Link to={`/cart`}>
+					  <CartIcon />
+					</Link>
+					
 				</div>
 			</div>
 		</nav>

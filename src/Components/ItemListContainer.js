@@ -20,13 +20,11 @@ const ItemListContainer = () => {
     }, [products]);
 
     return (
-        <div>
-            <ul>
+        <div className='row justify-content-center'>
                 {products.length && products.map(product => (
-                    <Item title={product.title} price={product.price}  />
+                    <Item title={product.title} price={product.price} thumbnail={product.thumbnail} id={product.id}/>
                 ))
                 }
-            </ul>
         </div>
     );
 }

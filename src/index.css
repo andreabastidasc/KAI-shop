@@ -33,17 +33,32 @@ body {
 }
 
 .counter-container { 
-  padding: 2rem !important;
-  width: 20rem;
+  border: 2px solid grey;
+  padding: .5rem 1rem !important;
+  width: 10rem;
   margin: 0 auto;
 }
 
-.btn {
-  max-height: 50px;
-  width: 50px;
-}
+
 
 .count {
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
+/*CARDS*/
+.card {
+  width: 300px !important;
+  max-width: 300px !important;
+  margin: 1rem 2rem;
+}
+.card img {
+  width: 100% !important;
+  max-width: 100% !important ;
+}
+.card .btn {
+  width: 100px !important;
+  background-color: bisque;
   font-weight: bold;
-  font-size: 2rem;
+  color: white;
 }
