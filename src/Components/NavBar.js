@@ -5,9 +5,9 @@ import CartIcon from './CartIcon';
 
 const NavBar = () => {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-light shadow col-12">
+		<nav className="navbar navbar-expand-lg navbar-dark shadow col-12">
 			<a className="navbar-brand" href="#">
-				KAI
+				The Hood
 			</a>
 			<button
 				className="navbar-toggler"

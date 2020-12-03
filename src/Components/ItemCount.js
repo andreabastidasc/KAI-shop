@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import AddButton from './AddButton';
 
 const ItemCount = (props) => {
 
@@ -17,10 +18,12 @@ const ItemCount = (props) => {
     };
     
     return (
-        <div className="counter-container d-flex flex-row justify-content-around">
+        <div>
+          <div className="counter-container d-flex flex-row justify-content-around">
             <button className="btn" onClick={onSust}> - </button> 
             <p className="count btn-more"> {count} </p>
             <button className="btn btn-less" onClick={onAdd}> + </button>
+          </div>
         </div>
     );
 }

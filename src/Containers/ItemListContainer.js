@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import Item from './Item';
+import Item from '../Components/Item';
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        const getProducts = fetch('https://api.mercadolibre.com/sites/MLA/search?category=MLA1743&limit=20');
+        const getProducts = fetch('https://api.mercadolibre.com/sites/MLA/search?category=MLA109085&limit=20');
         getProducts
         .then((response) => {
             const data = response.json();
