@@ -1,26 +1,19 @@
-import React, {useState,useEffect, useContext} from 'react';
+import React, {useState,useEffect} from 'react';
 import ItemCount from './ItemCount';
-import CartContext, { Context } from './CartContext';
 
 
 export default function ItemDetail ({item}) {
-    const [cart, setCart] = useContext(Context);
-
-    const addToCart = () => {
-        console.log('added')
-    }
 
     return (
-        <div>
+    <div className='col-12 d-flex flex-row justify-content-center p-4'>
         {
             item && 
-            (<div className="card col-12">
-            <img src={item.thumbnail} className="card-img-top" alt="..."></img>
+            (<div className="card text-center">
+            <img src={item.thumbnail} className="card-img-top img-fluid" alt="..."></img>
             <div className="card-body">
               <h5 className="card-title">{item.title}</h5>
-              <ItemCount max="10" min="0"/>
-               <button onClick={addToCart} className="btn mt-4">Agregar</button>
-               <p className="card-text">{item.price}$</p>
+              <p className="card-text mt-2">{item.price}$</p>
+              <ItemCount max="10" min="1" imagen={item.thumbnail} price={item.price} title={item.title}/>
             </div>
             </div>)
         }

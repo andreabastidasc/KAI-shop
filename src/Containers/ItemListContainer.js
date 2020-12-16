@@ -20,9 +20,12 @@ const ItemListContainer = () => {
     }, [products]);
 
     return (
-        <div className='row justify-content-center'>
+        <div className='row justify-content-center text-center'>
+            <div className='col-12 mt-4'>
+                <h3>Hoodies</h3>
+            </div>
                 {products.length && products.map(product => (
-                    <Item title={product.title} price={product.price} thumbnail={product.thumbnail} id={product.id}/>
+                    <Item price={product.price} thumbnail={product.thumbnail} id={product.id}/>
                 ))
                 }
         </div>

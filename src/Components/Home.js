@@ -1,11 +1,11 @@
 import React from 'react';
-import ItemListContainer from '../Containers/ItemListContainer'
+import MainImage from './MainImage';
 
 
-const Home = ({greeting}) => {
+const Home = () => {
     return (
-        <div className="col-12">
-            <h1 className="title">{greeting}</h1>
+        <div className="row">
+            <MainImage />
         </div>
     );
 }

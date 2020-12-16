@@ -6,8 +6,8 @@ import CartIcon from './CartIcon';
 const NavBar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark shadow col-12">
-			<a className="navbar-brand" href="#">
-				The Hood
+			<a className="navbar-brand">
+			 <Link to={`/`}>The Hood</Link>
 			</a>
 			<button
 				className="navbar-toggler"

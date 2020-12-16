@@ -1,11 +1,15 @@
 import React from 'react';
 import Home from '../Components/Home';
+import BrandsContainer from '../Containers/BrandsContainer';
+import NewModelsContainer from './NewModelsContainer';
 
 
 const HomeContainer = () => {
     return (
-        <div className='row'>
-            <Home greeting='' />
+        <div>
+            <Home />
+            <BrandsContainer />
+            <NewModelsContainer />
         </div>
     );
 }

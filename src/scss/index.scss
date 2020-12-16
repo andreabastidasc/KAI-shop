@@ -1,0 +1,191 @@
+@import 'footer';
+
+$main-font: 'Reenie Beanie', cursive;
+$main-font-color: white;
+$second-font: 'Pangolin', cursive;
+
+body {
+  margin: 0;
+}
+
+.icon-black {
+  color: black
+}
+/*NAVBAR*/
+.navbar {
+  background-color: black !important;
+  padding: 1rem 2rem !important;
+  .navbar-brand {
+    font-family: $main-font;
+    color: $main-font-color;
+    font-size: 2.5rem !important;
+  }
+  .nav-link {
+    font-family: $second-font;
+    color: $main-font-color;
+    font-size: 1.3rem !important;
+    padding: 0rem 2rem !important;
+
+    :hover {
+      color: white !important;
+      background-color: black !important;
+      border-radius: 1rem;
+    }
+  }
+  link {
+    color: white !important;
+  }
+  a {
+    color: white !important;
+  }
+  
+}
+
+.counter-container { 
+  border-radius: 2rem;
+  padding: .5rem 1rem !important;
+  width: 10rem;
+  margin: 0 auto;
+  button {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0rem !important;
+  }
+  .count {
+    margin-bottom: 0 !important;
+    font-weight: lighter;
+    font-size: 1rem;
+    font-family: $second-font;
+  } 
+}
+
+
+/*SHOP CARDS*/
+.shop-container {
+  h3 {
+    font-family: $main-font;
+    font-size: 4rem;
+  }
+  a {
+    color: white !important;
+  }
+  .card {
+    width: 300px !important;
+    max-width: 300px !important;
+    font-family: $main-font;
+    font-size: 2rem !important;
+    border: none !important;
+    @media(min-width:576px){
+      margin: 1rem;
+    }
+    @media(min-width:992px){
+      margin: 1rem 2rem;
+    }
+    img {
+      width: 100% !important;
+      max-width: 100% !important ;
+    }
+    .btn {
+      background-color: black;
+      font-size: 1.5rem;
+    }
+
+  }
+ 
+}
+/* INDIVIDUAL CARDS*/
+.card {
+  width: 300px !important;
+  max-width: 300px !important;
+  border: none !important;
+  @media(min-width:576px) {
+    width: 450px !important;
+    max-width: 450px !important;
+  }
+  .card-title {
+    font-family: $main-font;
+    font-size: 2rem;
+  }
+  .Add-button {
+    background-color: black;
+    border: none;
+    color: white;
+    font-family: $main-font;
+    font-size: 1.5rem;
+    padding: .5rem 2rem;
+  }
+  .card-text {
+    font-family: $main-font;
+    font-size: 3rem !important;
+  }
+}
+/*HOME*/
+.home_container {
+  background-image: url(../img/main-background.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding: 10rem;
+  color: $main-font-color;
+  font-family: $main-font;
+  @media (min-width: 992px){
+    padding: 15rem;
+  }
+  h2 {
+    font-size: 2rem;
+    @media (min-width: 992px){
+      font-size: 3rem;
+    }
+  }
+}
+/*BRANDS */
+.brands_container {
+  h3 {
+    font-family: $main-font;
+    color: black;
+    font-size: 3rem;
+    margin: 0 auto;
+  }
+  .brand {
+    width: 200px;
+  }
+}
+/* NEW MODELS */
+.new_models {
+  background-image: url(../img/newmodels.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 8rem;
+  font-family: $main-font;
+  color: $main-font-color;
+  font-size: 3rem;
+  color: black;
+  font-weight: bolder;
+  span {
+    a {
+      background-color: black !important;
+    }
+  }
+  h2 {
+    font-size: 3rem;
+    font-weight: bolder;
+  }
+  button {
+    font-family: $main-font;
+    color: $main-font-color;
+    font-size: 1.5rem;
+    padding: .5rem 3rem;
+    background-color: black;
+    border: none;
+  }
+}
+/* CART */
+.empty_cart-container {
+  padding: 5rem 3rem !important;
+  @media(min-width: 576px) {
+    padding: 10rem !important;
+  }
+  @media(min-width: 992px) {
+    padding: 15rem 10rem !important;
+  }
+}

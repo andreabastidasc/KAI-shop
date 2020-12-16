@@ -5,25 +5,22 @@ const ItemCount = (props) => {
 
     const [count, setCount] = useState(0);
 
-    const onAdd = () => {
-        if (count < props.max) {
-            setCount(prevCount => prevCount + 1);
+    function onAdd(sign) {
+        if ((sign === '+') && (count < props.max)) {
+            setCount(count+1);
+        } else if ((sign === '-') && (count > props.min)) {
+            setCount(count-1);
         } 
-    };
-
-    const onSust = () => {
-        if (count > props.min) {
-            setCount(prevCount => prevCount - 1);
-        }
-    };
+    }
     
     return (
         <div>
-          <div className="counter-container d-flex flex-row justify-content-around">
-            <button className="btn" onClick={onSust}> - </button> 
-            <p className="count btn-more"> {count} </p>
-            <button className="btn btn-less" onClick={onAdd}> + </button>
+          <div className="counter-container d-flex flex-row justify-content-around align-items-center shadow mt-3">
+            <button className="btn" onClick={() => onAdd('-')}> - </button> 
+            <p className="count"> {count} </p>
+            <button className="btn" onClick={() => onAdd('+')}> + </button>
           </div>
+          <AddButton itemCount={count} imagen={props.imagen} title={props.title} price={props.price}/>
         </div>
     );
 }
