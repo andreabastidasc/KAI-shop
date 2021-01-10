@@ -5,7 +5,7 @@ import { Context } from '../Context/CartContext';
 const AddButton = ({ click, itemCount, imagen, price, title }) => {
 
     const [selectedItems, setSelectedItems] = useContext(Context);
-    console.log(setSelectedItems,selectedItems);
+    
     const handleClick = () => {
         setSelectedItems([...selectedItems, {
             title : title,

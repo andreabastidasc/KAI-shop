@@ -12,8 +12,6 @@ import Footer from './Components/Footer'
 import CartContext from './Context/CartContext';
 
 
-
-
 function App() {
   return (
     <CartContext>

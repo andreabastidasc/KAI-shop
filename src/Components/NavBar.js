@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 import CartIcon from './CartIcon';
 
 
+
 const NavBar = () => {
+
+	
+
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark shadow col-12">
 			<a className="navbar-brand">

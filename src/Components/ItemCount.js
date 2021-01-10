@@ -3,7 +3,7 @@ import AddButton from './AddButton';
 
 const ItemCount = (props) => {
 
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(1);
 
     function onAdd(sign) {
         if ((sign === '+') && (count < props.max)) {
@@ -13,6 +13,7 @@ const ItemCount = (props) => {
         } 
     }
     
+
     return (
         <div>
           <div className="counter-container d-flex flex-row justify-content-around align-items-center shadow mt-3">

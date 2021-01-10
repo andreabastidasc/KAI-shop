@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export const Context = React.createContext([]);
 
 const CartContext = (props) => {
 
-   // const [cartCount, setCartCount] = useState(0);
+   
     const [selectedItems, setSelectedItems] = useState([]);
 
     return (

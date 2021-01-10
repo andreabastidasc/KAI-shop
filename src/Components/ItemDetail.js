@@ -9,11 +9,12 @@ export default function ItemDetail ({item}) {
         {
             item && 
             (<div className="card text-center">
-            <img src={item.thumbnail} className="card-img-top img-fluid" alt="..."></img>
+            <img src={item.data.image} className="card-img-top img-fluid" alt="..."></img>
             <div className="card-body">
-              <h5 className="card-title">{item.title}</h5>
-              <p className="card-text mt-2">{item.price}$</p>
-              <ItemCount max="10" min="1" imagen={item.thumbnail} price={item.price} title={item.title}/>
+              <h5 className="card-title">{item.data.name}</h5>
+              <h6>{item.data.description}</h6>
+              <p className="card-text mt-2">{item.data.price}$</p>
+              <ItemCount max="10" min="1" imagen={item.data.image} price={item.data.price} title={item.data.name}/>
             </div>
             </div>)
         }

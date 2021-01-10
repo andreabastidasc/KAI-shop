@@ -1,15 +1,26 @@
 import React from 'react';
-import { useContext } from 'react';
+import {useContext, useEffect, useState} from 'react';
 import { Context } from '../Context/CartContext';
 
 const CartIcon = () => {
+   
+    const [selectedItems] = useContext(Context);
+    const [amount, setAmount] = useState(0);
 
-   //const [selectedItems] = useContext(Context);
+    useEffect(()=> {
+      let fullAmount = 0;
+      if(selectedItems.length > 0) {
+          selectedItems.map(item => (
+              fullAmount += item.inCart
+          ))
+          setAmount(fullAmount);
+      }
+  }, [selectedItems])
 
     return (
         <a className="nav-link" href="#">
-          <span className="badge badge-pill badge-light">0</span>
-			<i className="fas fa-shopping-cart"></i>
+          <span className="badge badge-pill badge-light">{amount}</span>
+			    <i className="fas fa-shopping-cart"></i>
 	    </a>
     );
 }

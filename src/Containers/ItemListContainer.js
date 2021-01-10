@@ -1,31 +1,42 @@
 import React, {useState, useEffect} from 'react';
 import Item from '../Components/Item';
+import { getFirestore } from '../firebase/index';
 
 const ItemListContainer = () => {
+    const [loading , setLoading] = useState(false);
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        const getProducts = fetch('https://api.mercadolibre.com/sites/MLA/search?category=MLA109085&limit=20');
-        getProducts
-        .then((response) => {
-            const data = response.json();
-            return data;
-        }).then((data) => {
-            setProducts(data.results);
+        setLoading(true);
+        const db = getFirestore();
+        const productCollection = db.collection('products');
+        productCollection.get().then((querySnapshot) => {
+            if(querySnapshot.size === 0) {
+                return (
+                    <h2>We're having trouble loading the products. Please come back later!</h2>
+                )
+            }
+            setProducts(querySnapshot.docs.map(doc => ({
+                data: doc.data(),
+                id: doc.id
+            })));
+        }).catch((error) => {
+            console.log('Error searching products', error);
+        }).finally(() => {
+            setLoading(false);
         });
     }, []);
-
-    useEffect(() => {
-            console.log(products);
-    }, [products]);
 
     return (
         <div className='row justify-content-center text-center'>
             <div className='col-12 mt-4'>
                 <h3>Hoodies</h3>
+                {
+                    loading && <h4>Loading...</h4>
+                }
             </div>
                 {products.length && products.map(product => (
-                    <Item price={product.price} thumbnail={product.thumbnail} id={product.id}/>
+                  <Item price={product.data.price} image={product.data.image} id={product.id}/>
                 ))
                 }
         </div>
